@@ -56,6 +56,5 @@ The ATS score is calculated using TF-IDF (Term Frequency-Inverse Document Freque
 
 Visit `/docs` for the interactive Swagger UI.
 
-## Screenshots
 
-*(Placeholder for screenshots)*
+
