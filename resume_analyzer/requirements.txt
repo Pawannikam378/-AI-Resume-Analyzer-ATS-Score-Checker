@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+spacy
+pymupdf
+scikit-learn
+sqlalchemy
+python-multipart
+jinja2
+python-dateutil

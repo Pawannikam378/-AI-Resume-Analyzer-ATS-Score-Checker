@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Resume Analyzer</h1>
+            <p>Upload resumes and analyze them against job descriptions.</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>1. Upload Resume (PDF)</h2>
+                <form id="uploadForm">
+                    <input type="file" id="resumeFile" name="file" accept=".pdf" required>
+                    <button type="submit" class="btn">Upload Resume</button>
+                </form>
+                <div id="uploadStatus"></div>
+            </section>
+
+            <section class="analysis-section">
+                <h2>2. Job Description</h2>
+                <textarea id="jobDescription" placeholder="Paste job description here..." rows="6"></textarea>
+                
+                <div class="controls">
+                    <button id="analyzeBtn" class="btn primary">Analyze & Rank</button>
+                </div>
+            </section>
+            
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div id="loading" class="hidden">Analyzing...</div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>ATS Score</h3>
+                        <div class="score-circle" id="scoreDisplay">0%</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>Matched Skills</h3>
+                        <ul id="matchedSkillsList" class="skill-list"></ul>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>Missing Keywords</h3>
+                        <ul id="missingKeywordsList" class="keyword-list"></ul>
+                    </div>
+                </div>
+
+                <div class="ranking-section">
+                     <h3>Result Context (Resume ID: <span id="currentResumeId">-</span>)</h3>
+                </div>
+            </section>
+
+            <section class="resume-list-section">
+                <h2>Uploaded Resumes</h2>
+                <table id="resumeTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Filename</th>
+                            <th>Skills Extraction</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
