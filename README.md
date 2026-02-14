@@ -267,4 +267,4 @@ MIT License
 
 Your Name: Pawan Nikam
 Final Year Engineering Student  
-Focused on AI, Data Science & Cybersecurity  
+Focused on AI, Data Science, Data Analytics, and IOT Systems 
