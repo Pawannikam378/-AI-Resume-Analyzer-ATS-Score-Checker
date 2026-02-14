@@ -243,11 +243,6 @@ pytest
 
 ---
 
-## 📸 Screenshots
-
-_Add screenshots here_
-
----
 
 ## 💼 Why This Project Is Portfolio-Ready
 
